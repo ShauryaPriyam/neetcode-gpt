@@ -26,8 +26,8 @@ class Solution:
         # Return np.round(final_weights, 5)
         for _ in range(num_iterations):
             preds=X @ initial_weights
-            grad=(-2/len(X))*(X.T @( Y-preds))
-            initial_weights-=self.learning_rate*grad
+            derivative=(-2/len(X))*(X.T @( Y-preds))
+            initial_weights-=self.learning_rate*derivative
 
         return np.round(initial_weights,5)    
 
