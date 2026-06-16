@@ -24,5 +24,5 @@ class Solution:
         epsilon = 1e-7
         y_pred+=epsilon
         n=y_true.shape[0]
-        L=(-1/n)*np.sum(np.sum(y_true*np.log(y_pred)))
+        L=(-1/n)*np.sum(y_true*np.log(y_pred))
         return np.round(L,4)
